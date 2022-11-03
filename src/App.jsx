@@ -21,7 +21,7 @@ function App() {
     <AppContext.Provider value={ initialState }>
     <BrowserRouter>
         <Routes>
-          <Route path='/' element={
+          <Route path='/FarmLabs' element={
             <NavLayout>
               <Home />
             </NavLayout>
