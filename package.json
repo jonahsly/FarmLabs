@@ -1,7 +1,7 @@
 {
   "name": "farmlabs",
   "version": "0.1.0",
-  "homepage": "https://jonahsly.github.io/FarmLabs",
+  "homepage": "https://jonahsly.github.io/FarmLabs/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

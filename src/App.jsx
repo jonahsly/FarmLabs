@@ -21,20 +21,20 @@ function App() {
     <AppContext.Provider value={ initialState }>
     <BrowserRouter>
         <Routes>
-          <Route path='FarmLabs' element={
+          <Route path='/FarmLabs' element={
             <NavLayout>
               <Home />
             </NavLayout>
           } />
-          <Route path='FarmLabs/create-account' element={<CreateAccount />} />
-          <Route path='FarmLabs/new-passwrod' element={<NewPassword />} />
-          <Route path='FarmLabs/password-recovery' element={<PasswordRecovery />} />
-          <Route path='FarmLabs/my-account' element={<MyAccount />} />
-          <Route path='FarmLabs/login' element={<Login />} />
-          <Route path='FarmLabs/send-email' element={<SendEmail />} />
-          <Route path='FarmLabs/checkout' element={<Checkout />} />
-          <Route path='FarmLabs/orders' element={<Orders />} />
-          <Route path='FarmLabs/*' element={<NotFound />} />
+          <Route path='create-account' element={<CreateAccount />} />
+          <Route path='new-passwrod' element={<NewPassword />} />
+          <Route path='password-recovery' element={<PasswordRecovery />} />
+          <Route path='my-account' element={<MyAccount />} />
+          <Route path='login' element={<Login />} />
+          <Route path='send-email' element={<SendEmail />} />
+          <Route path='checkout' element={<Checkout />} />
+          <Route path='orders' element={<Orders />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
     </BrowserRouter>
     </AppContext.Provider>
