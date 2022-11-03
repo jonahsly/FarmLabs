@@ -1,0 +1,253 @@
+[{
+    "id":1,
+    "title":"Amnesia Haze",
+    "price":320,
+    "description":"Sativa. THC: 17-22%.",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/Amnesia-Haze.jpg"]
+},
+{
+    "id":2,
+    "title":"AK-47",
+    "price":250,
+    "description":"Sativa e Indica. THC: 12-24%",
+    "category":{
+        "id":3,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/ak47.jpg"]
+},
+{
+    "id":3,
+    "title":"Polar Vaporesso",
+    "price":99,
+    "description":"none description",
+    "category":{
+        "id":3,
+        "name":"Vapes"
+    },
+    "images":["https://www.purecannastore.com/images/shop/VAPORESSO%20POLAR%20PRO.jpg"]
+},
+{
+    "id":4,
+    "title":"Cinnamon CBD Hemp Oil",
+    "price":600,
+    "description":"The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+    "category":{
+        "id":3,
+        "name":"Oils"
+    },
+    "images":["https://www.purecannastore.com/images/shop/CINNAMON%20CBD%20HEMP%20OIL%20DROPS.jpg"]
+},
+{
+    "id":5,
+    "title":"Cannabis Fudge Brownie",
+    "price":80,
+    "description":"The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+    "category":{
+        "id":2,
+        "name":"Edibles"
+    },
+    "images":["https://www.purecannastore.com/images/shop/CANNABIS%20FUDGE%20BROWNIE.jpg"]
+},
+{
+    "id":6,
+    "title":"Blueberry",
+    "price":375,
+    "description":"The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/Blueberry.jpg"]
+},
+{
+    "id":7,
+    "title":"Sugar Wax",
+    "price":300,
+    "description":"The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/VIOLATOR%20SUGER%20WAX.jpg"]
+},
+{
+    "id":8,
+    "title":"Purple Kush",
+    "price":250,
+    "description":"The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/Purple-Kush.jpg"]
+},
+{
+    "id":9,
+    "title":"Cannabis Chip Brownie",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/CANNABIS%20FUDGE%20BROWNIE%20Bites.jpg"]
+},
+{
+    "id":10,
+    "title":"Blueberry Feminized",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/Blueberry-Feminized.jpg"]
+},
+{
+    "id":11,
+    "title":"Dank Vape",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/Dank%20vapes.jpg"]
+},
+{
+    "id":12,
+    "title":"White Widow",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/White-Widow.jpg"]
+},
+{
+    "id":13,
+    "title":"Crede CBD in Cold-Pressed",
+    "price":180,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/Crede-CBD-Cold-Pressed.jpg"]
+},
+{
+    "id":14,
+    "title":"THC Live Diamonds",
+    "price":200,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/THC%20LIVE%20DIAMONDS-%20SUPERIOR%20EXTRACT.jpg"]
+},
+{
+    "id":15,
+    "title":"Super Lemon Haze",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/Super-Lemon-Haze.jpg"]
+},
+{
+    "id":16,
+    "title":"Stiiizy Pod",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/STIIIZY%20POD.jpg"]
+},
+{
+    "id":17,
+    "title":"Banana Bread",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/CANNABIS%20BANANA%20BREAD.jpg"]
+},
+{
+    "id":18,
+    "title":"AC/DC",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/AC-DC.jpg"]
+},
+{
+    "id":19,
+    "title":"Calm Cannabis",
+    "price":180,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/CALM.jpg"]
+},
+{
+    "id":20,
+    "title":"White Widow Wax",
+    "price":200,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/WHITE%20WIDOW%20WAX.jpg"]
+},
+{
+    "id":21,
+    "title":"Supreme Disposable Vape Pen",
+    "price":200,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/Supreme%20%E2%80%93%20Disposable%20Vape%20Pen.jpg"]
+},
+{
+    "id":22,
+    "title":"Cannabis Chocolate Fudge",
+    "price":250,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/CANNABIS%20CHOCOLATE%20FUDGE.jpg"]
+},
+{
+    "id":23,
+    "title":"Peppermint Drew Drops",
+    "price":200,
+    "description":"The Apollotech",
+    "category":{
+        "id":1,
+        "name":"Flowers"
+    },
+    "images":["https://www.purecannastore.com/images/shop/1%20OZ%20PEPPERMINT%20100mg%20of%20CBD.jpg"]
+}]

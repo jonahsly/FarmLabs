@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/FarmLabs/static/css/main.34d737ce.css",
+    "main.js": "/FarmLabs/static/js/main.c2b41620.js",
+    "static/js/787.c99a1ac1.chunk.js": "/FarmLabs/static/js/787.c99a1ac1.chunk.js",
+    "static/media/not_found.png": "/FarmLabs/static/media/not_found.72708c7ef22a8973c1e1.png",
+    "static/media/logo_farm_labs.svg": "/FarmLabs/static/media/logo_farm_labs.7ad36235d1d966cee86dc01a645066a3.svg",
+    "static/media/API": "/FarmLabs/static/media/API.280aefa058ec3224b593",
+    "static/media/bt_add_to_cart.svg": "/FarmLabs/static/media/bt_add_to_cart.8b832de783e620068b190a112b7ec184.svg",
+    "static/media/icon_shopping_cart.svg": "/FarmLabs/static/media/icon_shopping_cart.6ee019074975f25fb7927a83133327c4.svg",
+    "static/media/email.svg": "/FarmLabs/static/media/email.bb2ee953f58b7171dfeb6401818f32e4.svg",
+    "static/media/icon_menu.svg": "/FarmLabs/static/media/icon_menu.3aa38c5e16715afedfa9b1adb8607b7d.svg",
+    "static/media/arrow.svg": "/FarmLabs/static/media/arrow.e419d8c93e852173b9b8261835467277.svg",
+    "index.html": "/FarmLabs/index.html",
+    "main.34d737ce.css.map": "/FarmLabs/static/css/main.34d737ce.css.map",
+    "main.c2b41620.js.map": "/FarmLabs/static/js/main.c2b41620.js.map",
+    "787.c99a1ac1.chunk.js.map": "/FarmLabs/static/js/787.c99a1ac1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34d737ce.css",
+    "static/js/main.c2b41620.js"
+  ]
+}
