@@ -1,17 +1,75 @@
-# FarmLabs Cannabis Store - Frontend Development
+# FarmLabs
 
-This project created with React.js, uses react-router-dom and axios axios to perform.
+## English
 
-## Features
+Frontend e-commerce application built with React.  
+This project includes a product catalog, shopping cart flow, and core account/order views.
 
-### Adaptable
+### Tech Stack
 
-### Simple
+- React 18
+- React Router DOM
+- Axios
+- Component-based CSS
 
-### Friendly
+### Local Setup
 
-### Escalable
+```bash
+npm install
+npm start
+```
 
-## Contact
+The app runs at `http://localhost:3000`.
 
-You can contact me at slyjonatan@gmail.com
+### Available Scripts
+
+- `npm start`: starts the development server.
+- `npm run build`: creates a production build.
+- `npm test`: runs tests with React Scripts.
+- `npm run deploy`: deploys the build to GitHub Pages.
+
+### Deployment
+
+The project is configured for GitHub Pages deployment through the `homepage` field in `package.json`.
+
+### Contact
+
+- Email: `jonatan.sly@proton.me`
+
+---
+
+## Espanol
+
+Aplicacion frontend de e-commerce desarrollada con React.  
+Este proyecto incluye catalogo de productos, flujo de carrito de compras y vistas principales de cuenta/pedidos.
+
+### Stack Tecnologico
+
+- React 18
+- React Router DOM
+- Axios
+- CSS por componentes
+
+### Ejecucion Local
+
+```bash
+npm install
+npm start
+```
+
+La aplicacion se ejecuta en `http://localhost:3000`.
+
+### Scripts Disponibles
+
+- `npm start`: inicia el servidor de desarrollo.
+- `npm run build`: genera el build de produccion.
+- `npm test`: ejecuta pruebas con React Scripts.
+- `npm run deploy`: publica el build en GitHub Pages.
+
+### Despliegue
+
+El proyecto esta configurado para desplegar en GitHub Pages mediante la propiedad `homepage` en `package.json`.
+
+### Contacto
+
+- Email: `jonatan.sly@proton.me`
