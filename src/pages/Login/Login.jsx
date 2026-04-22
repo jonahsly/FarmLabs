@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 import logo from '../../assets/logos/logo_farm_labs.svg';
 /*Revisar las funciones y la clase donde se tratan*/ 
@@ -18,17 +19,17 @@ const Login = () => {
 		<div className="Login">
             <div className="Login-container">
                 <img src={logo} alt="logo" className="logo"/>
-                <form action="/" className="form">
+                <form ref={form} className="form" onSubmit={handleSubmit}>
                     <label htmlFor="email" className="label">Email address</label>
-                    <input type="text" name="email" placeholder="farmlabs@example.com" className="input input-email"/>
+                    <input type="email" id="email" name="email" placeholder="farmlabs@example.com" className="input input-email"/>
                     <label htmlFor="password" className="label">Password</label>
-                    <input type="text" name="password" placeholder="*********" className="input input-password"/>
+                    <input type="password" id="password" name="password" placeholder="*********" className="input input-password"/>
                     <button
-						onClick={handleSubmit}
+						type="submit"
 						className="primary-button login-button">
 						Log in
 					</button>
-					<a href="/">Forgot my password</a>
+					<Link to="/password-recovery">Forgot my password</Link>
                 </form>
                 <button className="secondary-button signup-button">Sign up</button>
             </div>

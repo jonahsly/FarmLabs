@@ -1,8 +1,12 @@
 import React from 'react';
+import { useContext } from 'react';
 import OrderItem from '../../components/OrderItem/OrderItem';
+import AppContext from '../../contexts/AppContext';
 import './Checkout.css';
 
 const Checkout = () => {
+	const { state } = useContext(AppContext);
+	const total = state.cart.reduce((acc, item) => acc + item.price, 0);
 	return (
 		<div className="Checkout">
 			<div className="Checkout-container">
@@ -10,13 +14,19 @@ const Checkout = () => {
 				<div className="Checkout-content">
 					<div className="order">
 						<p>
-							<span>03.25.21</span>
-							<span>6 articles</span>
+							<span>Current order</span>
+							<span>{state.cart.length} articles</span>
 						</p>
-						<p>$560.00</p>
+						<p>${total}</p>
 					</div>
 				</div>
-				<OrderItem />
+				{state.cart.length > 0 ? (
+					state.cart.map((product, index) => (
+						<OrderItem key={`checkout-item-${product.id}-${index}`} product={product} />
+					))
+				) : (
+					<p>No items in cart.</p>
+				)}
 			</div>
 		</div>
 	);

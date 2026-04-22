@@ -19,15 +19,15 @@ function App() {
   const initialState = useInitialState();
   return (
     <AppContext.Provider value={ initialState }>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path='/FarmLabs' element={
+          <Route path='/' element={
             <NavLayout>
               <Home />
             </NavLayout>
           } />
           <Route path='create-account' element={<CreateAccount />} />
-          <Route path='new-passwrod' element={<NewPassword />} />
+          <Route path='new-password' element={<NewPassword />} />
           <Route path='password-recovery' element={<PasswordRecovery />} />
           <Route path='my-account' element={<MyAccount />} />
           <Route path='login' element={<Login />} />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SendEmail.css';
 import ilogo from '../../assets/logos/logo_farm_labs.svg';
 import iemail from '../../assets/icons/email.svg';
@@ -16,7 +17,7 @@ const SendEmail = () => {
 				<button className="primary-button login-button">Login</button>
 				<p className="resend">
 					<span>Didn't receive the email? </span>
-					<a href="/">Resend</a>
+					<Link to="/">Resend</Link>
 				</p>
 			</div>
 		</div>
