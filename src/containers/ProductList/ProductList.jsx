@@ -8,12 +8,18 @@ const API = "https://api.escuelajs.co/api/v1/products";
 */
 const ProductList = () => {
 	const products = useGetProducts(API);
+	const hasProducts = products && products.length > 0;
+
 	return (
 		<section className="main-container">
 			<div className="ProductList">
-				{products && products.map((product) => (
-					<ProductItem product={product} key={product.id} />
-				))}
+				{hasProducts ? (
+					products.map((product) => (
+						<ProductItem product={product} key={product.id} />
+					))
+				) : (
+					<p className="empty-state">No products available right now.</p>
+				)}
 			</div>
 		</section>
 	);
