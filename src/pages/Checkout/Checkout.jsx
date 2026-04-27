@@ -6,7 +6,11 @@ import './Checkout.css';
 
 const Checkout = () => {
 	const { state } = useContext(AppContext);
-	const total = state.cart.reduce((acc, item) => acc + item.price, 0);
+	const total = state.cart.reduce((acc, item) => {
+		const quantity = item.quantity || 1;
+		return acc + (item.price * quantity);
+	}, 0);
+	const articleCount = state.cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
 	return (
 		<div className="Checkout">
 			<div className="Checkout-container">
@@ -15,7 +19,7 @@ const Checkout = () => {
 					<div className="order">
 						<p>
 							<span>Current order</span>
-							<span>{state.cart.length} articles</span>
+							<span>{articleCount} articles</span>
 						</p>
 						<p>${total}</p>
 					</div>

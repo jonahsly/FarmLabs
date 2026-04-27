@@ -2,8 +2,8 @@
 
 .OrderItem {
 	display: grid;
-	grid-template-columns: auto 1fr auto auto;
-	gap: 16px;
+	grid-template-columns: auto 1fr auto auto auto;
+	gap: 12px;
 	margin-bottom: 24px;
 	align-items: center;
 }
@@ -20,6 +20,10 @@
 	color: var(--very-light-pink);
 }
 .OrderItem p:nth-child(3) {
+	color: var(--very-light-pink);
+	font-size: var(--sm);
+}
+.OrderItem p:nth-child(4) {
 	font-size: var(--md);
 	font-weight: bold;
 }

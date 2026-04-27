@@ -12,6 +12,7 @@ const Header = () => {
     const [toggle, setToggle] = useState(false);
     const [toggleOrders, setToggleOrders] = useState(false);
     const { state:{cart} } = useContext(AppContext);
+    const cartItemsCount = cart.reduce((total, item) => total + (item.quantity || 1), 0);
 	const handleToggle = () => {
 		setToggle(!toggle);
 	};
@@ -51,7 +52,7 @@ const Header = () => {
                         onClick={() =>setToggleOrders(!toggleOrders)}
                         >
                         <img src={icart} alt="shopping cart"/>
-                        {cart.length > 0 ? <div>{cart.length}</div> : null}
+                        {cartItemsCount > 0 ? <div>{cartItemsCount}</div> : null}
                     </li>
                 </ul>
             </div>

@@ -7,6 +7,8 @@ const OrderItem = ({product}) => {
 	const { removeFromCart } = useContext(AppContext);
 	if (!product) return null;
 	const image = product.images && product.images.length > 0 ? product.images[0] : '';
+	const quantity = product.quantity || 1;
+	const lineTotal = product.price * quantity;
 	const handleRemove = product => {
 		removeFromCart(product);
 	}
@@ -16,7 +18,8 @@ const OrderItem = ({product}) => {
 				<img src={image} alt={product.title} />
 			</figure>
 			<p>{product.title}</p>
-			<p>${product.price}</p>
+			<p className="order-item-meta">x{quantity}</p>
+			<p>${lineTotal}</p>
 			<img src={iclose} alt="close"onClick={() => handleRemove(product)}/>
 		</div>
 	);

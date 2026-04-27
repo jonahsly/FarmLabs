@@ -9,7 +9,10 @@ const MyOrder = () => {
 	const hasItems = state.cart.length > 0;
 
 	const sumTotal = () => {
-		const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
+		const reducer = (accumulator, currentValue) => {
+			const quantity = currentValue.quantity || 1;
+			return accumulator + (currentValue.price * quantity);
+		};
 		const sum = state.cart.reduce(reducer, 0);
 		return sum;
 	}
