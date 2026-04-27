@@ -6,9 +6,11 @@ import './Checkout.css';
 
 const Checkout = () => {
 	const { state } = useContext(AppContext);
+	// Recalculate totals from normalized cart lines on every render.
 	const total = state.cart.reduce((acc, item) => {
 		const quantity = item.quantity || 1;
-		return acc + (item.price * quantity);
+		const unitPrice = Number.isFinite(Number(item.price)) ? Number(item.price) : 0;
+		return acc + (unitPrice * quantity);
 	}, 0);
 	const articleCount = state.cart.reduce((acc, item) => acc + (item.quantity || 1), 0);
 	return (

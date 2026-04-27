@@ -11,7 +11,9 @@ const MyOrder = () => {
 	const sumTotal = () => {
 		const reducer = (accumulator, currentValue) => {
 			const quantity = currentValue.quantity || 1;
-			return accumulator + (currentValue.price * quantity);
+			// Guard totals against malformed or missing price values.
+			const unitPrice = Number.isFinite(Number(currentValue.price)) ? Number(currentValue.price) : 0;
+			return accumulator + (unitPrice * quantity);
 		};
 		const sum = state.cart.reduce(reducer, 0);
 		return sum;

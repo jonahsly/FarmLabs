@@ -3,6 +3,7 @@ import AppContext from '../../contexts/AppContext';
 import './ProductItem.css';
 import iadd from '../../assets/icons/bt_add_to_cart.svg';
 import iadded from '../../assets/icons/bt_added_to_cart.svg';
+import fallbackProductImage from '../../assets/pexels-photo-260024.webp';
 
 const ProductItem = ({ product }) => {
 	const { addToCart } = useContext(AppContext);
@@ -19,15 +20,17 @@ const ProductItem = ({ product }) => {
 		addToCart(item);
 		setAddedFeedback(true);
 	}
-	const productImage = product.images && product.images.length > 0 ? product.images[0] : '';
+	const productImage = product.images && product.images.length > 0 ? product.images[0] : fallbackProductImage;
+	const productTitle = product.title || 'Untitled product';
+	const productPrice = Number.isFinite(Number(product.price)) ? Number(product.price) : 0;
 
 	return (
 		<div className="ProductItem">
-			<img src={productImage} alt={product.title} />
+			<img src={productImage} alt={productTitle} />
 			<div className="product-info">
 				<div>
-					<p>${product.price}</p>
-					<p>{product.title}</p>
+					<p>${productPrice}</p>
+					<p>{productTitle}</p>
 					{addedFeedback ? <p className="added-feedback">Added to cart</p> : null}
 				</div>
 				<figure onClick={() => handleClick(product)}>
