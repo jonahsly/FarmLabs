@@ -1,8 +1,27 @@
 import React from "react";
+import { useState } from "react";
 import "./PasswordRecovery.css";
 import logo from "../../assets/logos/logo_farm_labs.svg";
+import { isValidEmail } from "../../utils/validation";
 
 const RecoveryPassword = () => {
+  const [error, setError] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const email = (formData.get("email") || "").toString().trim();
+
+    // Basic email validation prevents sending incomplete recovery requests.
+    if (!isValidEmail(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    setError("");
+    console.log({ email });
+  };
+
   return (
     <div className="PasswordRecovery">
       <div className="PasswordRecovery-container">
@@ -11,11 +30,12 @@ const RecoveryPassword = () => {
         <p className="subtitle">
           Inform the email address used to create your account
         </p>
-        <form action="/" className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="email" className="label">
             Email address
           </label>
-          <input type="text" id="email" className="input input-email" />
+          <input type="email" id="email" name="email" className="input input-email" required />
+          {error ? <p className="form-error">{error}</p> : null}
           <input
             type="submit"
             value="Confirm"

@@ -2,3 +2,10 @@ body {
 	margin: 0;
 	font-family: 'Quicksand', sans-serif
 }
+
+.form-error {
+	margin: 8px 0 0;
+	color: #d64545;
+	font-size: 13px;
+	line-height: 1.3;
+}
