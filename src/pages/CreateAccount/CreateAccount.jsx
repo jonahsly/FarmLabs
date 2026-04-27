@@ -38,7 +38,7 @@ const CreateAccount = () => {
 	return (
 		<div className="CreateAccount">
 			<div className="CreateAccount-container">
-				<h1 className="title">My account</h1>
+				<h1 className="title">My Account</h1>
 				<form className="form" onSubmit={handleSubmit}>
 					<div>
 						<label htmlFor="name" className="label">Name</label>

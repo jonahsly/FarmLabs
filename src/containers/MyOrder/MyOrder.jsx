@@ -20,7 +20,7 @@ const MyOrder = () => {
 		<aside className="MyOrder">
 			<div className="title-container">
 				<img src={iarrow} alt="arrow" />
-				<p className="title">My order</p>
+				<p className="title">My Order</p>
 			</div>
 			<div className="my-order-content">
 				{hasItems ? (

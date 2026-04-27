@@ -10,7 +10,7 @@ const Menu = () => {
 					<Link to="/orders" className="title">My orders</Link>
 				</li>
 				<li>
-					<Link to="/my-account">My account</Link>
+					<Link to="/my-account">My Account</Link>
 				</li>
 				<li>
 					<Link to="/login">Sign out</Link>

@@ -28,7 +28,7 @@ const RecoveryPassword = () => {
         <img src={logo} alt="logo" className="logo" />
         <h1 className="title">Password recovery</h1>
         <p className="subtitle">
-          Inform the email address used to create your account
+          Enter the email address used to create your account
         </p>
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="email" className="label">

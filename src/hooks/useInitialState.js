@@ -31,7 +31,22 @@ const useInitialState = () => {
 
 	const removeFromCart = (payload) => {
 		setState((prevState) => {
-			// Current remove behavior deletes the entire product line.
+			// Remove only one unit per action and drop the line at zero.
+			const existingItem = prevState.cart.find((item) => item.id === payload.id);
+			if (!existingItem) {
+				return prevState;
+			}
+			if ((existingItem.quantity || 1) > 1) {
+				return {
+					...prevState,
+					cart: prevState.cart.map((item) =>
+						item.id === payload.id
+							? { ...item, quantity: (item.quantity || 1) - 1 }
+							: item
+					),
+				};
+			}
+
 			return {
 				...prevState,
 				cart: prevState.cart.filter((item) => item.id !== payload.id),

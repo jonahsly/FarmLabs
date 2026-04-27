@@ -14,12 +14,12 @@ const Checkout = () => {
 	return (
 		<div className="Checkout">
 			<div className="Checkout-container">
-				<h1 className="title">My order</h1>
+				<h1 className="title">My Order</h1>
 				<div className="Checkout-content">
 					<div className="order">
 						<p>
-							<span>Current order</span>
-							<span>{articleCount} articles</span>
+							<span>Current Order</span>
+							<span>{articleCount} items</span>
 						</p>
 						<p>${total}</p>
 					</div>
@@ -29,7 +29,7 @@ const Checkout = () => {
 						<OrderItem key={`checkout-item-${product.id}-${index}`} product={product} />
 					))
 				) : (
-					<p>No items in cart.</p>
+					<p>Your cart is empty.</p>
 				)}
 			</div>
 		</div>
