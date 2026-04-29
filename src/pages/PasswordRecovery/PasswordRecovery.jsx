@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./PasswordRecovery.css";
 import logo from "../../assets/logos/logo_farm_labs.svg";
+import { UI_TEXT } from "../../constants/uiText";
 import { isValidEmail } from "../../utils/validation";
 
 const RecoveryPassword = () => {
@@ -26,19 +27,19 @@ const RecoveryPassword = () => {
     <div className="PasswordRecovery">
       <div className="PasswordRecovery-container">
         <img src={logo} alt="logo" className="logo" />
-        <h1 className="title">Password recovery</h1>
+        <h1 className="title">{UI_TEXT.auth.passwordRecoveryTitle}</h1>
         <p className="subtitle">
-          Enter the email address used to create your account
+          {UI_TEXT.auth.passwordRecoverySubtitle}
         </p>
         <form className="form" onSubmit={handleSubmit}>
           <label htmlFor="email" className="label">
-            Email address
+            {UI_TEXT.auth.emailAddressLabel}
           </label>
           <input type="email" id="email" name="email" className="input input-email" required />
           {error ? <p className="form-error">{error}</p> : null}
           <input
             type="submit"
-            value="Confirm"
+            value={UI_TEXT.auth.confirm}
             className="primary-button login-button"
           />
         </form>

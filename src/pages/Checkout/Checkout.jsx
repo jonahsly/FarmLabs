@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import OrderItem from '../../components/OrderItem/OrderItem';
 import AppContext from '../../contexts/AppContext';
+import { UI_TEXT } from '../../constants/uiText';
 import './Checkout.css';
 
 const Checkout = () => {
@@ -16,12 +17,12 @@ const Checkout = () => {
 	return (
 		<div className="Checkout">
 			<div className="Checkout-container">
-				<h1 className="title">My Order</h1>
+				<h1 className="title">{UI_TEXT.checkout.title}</h1>
 				<div className="Checkout-content">
 					<div className="order">
 						<p>
-							<span>Current Order</span>
-							<span>{articleCount} items</span>
+							<span>{UI_TEXT.checkout.currentOrder}</span>
+							<span>{articleCount} {UI_TEXT.checkout.itemsSuffix}</span>
 						</p>
 						<p>${total}</p>
 					</div>
@@ -31,7 +32,7 @@ const Checkout = () => {
 						<OrderItem key={`checkout-item-${product.id}-${index}`} product={product} />
 					))
 				) : (
-					<p>Your cart is empty.</p>
+					<p>{UI_TEXT.checkout.empty}</p>
 				)}
 			</div>
 		</div>

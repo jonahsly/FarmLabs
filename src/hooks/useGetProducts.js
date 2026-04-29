@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { normalizeProducts } from '../utils/normalizeProducts';
+import { UI_TEXT } from '../constants/uiText';
 
 
 const useGetProducts = (source) => {
@@ -38,7 +39,7 @@ const useGetProducts = (source) => {
             } catch (requestError) {
                 if (!isMounted || controller.signal.aborted) return;
                 setProducts([]);
-                setError("We couldn't load products right now. Please try again.");
+                setError(UI_TEXT.catalog.loadError);
             } finally {
                 if (isMounted) {
                     setLoading(false);

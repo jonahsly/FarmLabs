@@ -1,6 +1,9 @@
 import React from 'react';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { APP_ROUTES } from '../../constants/routes';
+import { UI_TEXT } from '../../constants/uiText';
+import appConfig from '../../config/appConfig';
 import './Login.css';
 import logo from '../../assets/logos/logo_farm_labs.svg';
 import {
@@ -41,19 +44,20 @@ const Login = () => {
             <div className="Login-container">
                 <img src={logo} alt="logo" className="logo"/>
                 <form ref={form} className="form" onSubmit={handleSubmit}>
-                    <label htmlFor="email" className="label">Email address</label>
-                    <input type="email" id="email" name="email" placeholder="farmlabs@example.com" className="input input-email" required/>
+                    {/* Labels and placeholders are centralized to reduce copy drift. */}
+                    <label htmlFor="email" className="label">{UI_TEXT.auth.emailAddressLabel}</label>
+                    <input type="email" id="email" name="email" placeholder={appConfig.supportEmail} className="input input-email" required/>
                     <label htmlFor="password" className="label">Password</label>
                     <input type="password" id="password" name="password" placeholder="*********" className="input input-password" minLength={MIN_PASSWORD_LENGTH} required/>
                     {error ? <p className="form-error">{error}</p> : null}
                     <button
 						type="submit"
 						className="primary-button login-button">
-						Log in
+						{UI_TEXT.auth.login}
 					</button>
-					<Link to="/password-recovery">Forgot my password</Link>
+					<Link to={APP_ROUTES.PASSWORD_RECOVERY}>{UI_TEXT.auth.forgotPassword}</Link>
                 </form>
-                <button className="secondary-button signup-button">Sign up</button>
+                <button className="secondary-button signup-button">{UI_TEXT.auth.signUp}</button>
             </div>
         </div>
 	);

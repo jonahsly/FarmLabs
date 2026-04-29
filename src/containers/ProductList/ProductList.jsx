@@ -3,6 +3,7 @@ import ProductItem from "../../components/ProductItem/ProductItem";
 import "./ProductList.css";
 import useGetProducts from '../../hooks/useGetProducts';
 import productsSource from '../../config/productsSource';
+import { UI_TEXT } from '../../constants/uiText';
 
 const ProductList = () => {
 	const { products, loading, error, reload } = useGetProducts(productsSource);
@@ -13,7 +14,7 @@ const ProductList = () => {
 		return (
 			<section className="main-container">
 				<div className="ProductList">
-					<p className="empty-state">Loading products...</p>
+					<p className="empty-state">{UI_TEXT.catalog.loading}</p>
 				</div>
 			</section>
 		);
@@ -26,7 +27,7 @@ const ProductList = () => {
 				<div className="ProductList">
 					<p className="empty-state">{error}</p>
 					<button type="button" className="retry-button" onClick={reload}>
-						Retry
+						{UI_TEXT.catalog.retry}
 					</button>
 				</div>
 			</section>
@@ -41,7 +42,7 @@ const ProductList = () => {
 						<ProductItem product={product} key={product.id} />
 					))
 				) : (
-					<p className="empty-state">No products available right now.</p>
+					<p className="empty-state">{UI_TEXT.catalog.empty}</p>
 				)}
 			</div>
 		</section>

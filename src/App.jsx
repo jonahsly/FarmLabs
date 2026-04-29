@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound/NotFound';
 import Orders from './pages/Orders/Orders';
 import AppContext from './contexts/AppContext';
 import useInitialState from './hooks/useInitialState';
+import { APP_ROUTES } from './constants/routes';
 import './styles/global.css';
 
 function App() {
@@ -20,21 +21,22 @@ function App() {
   return (
     <AppContext.Provider value={ initialState }>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/* Route constants keep navigation and route declarations in sync. */}
         <Routes>
-          <Route path='/' element={
+          <Route path={APP_ROUTES.HOME} element={
             <NavLayout>
               <Home />
             </NavLayout>
           } />
-          <Route path='create-account' element={<CreateAccount />} />
-          <Route path='new-password' element={<NewPassword />} />
-          <Route path='password-recovery' element={<PasswordRecovery />} />
-          <Route path='my-account' element={<MyAccount />} />
-          <Route path='login' element={<Login />} />
-          <Route path='send-email' element={<SendEmail />} />
-          <Route path='checkout' element={<Checkout />} />
-          <Route path='orders' element={<Orders />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path={APP_ROUTES.CREATE_ACCOUNT} element={<CreateAccount />} />
+          <Route path={APP_ROUTES.NEW_PASSWORD} element={<NewPassword />} />
+          <Route path={APP_ROUTES.PASSWORD_RECOVERY} element={<PasswordRecovery />} />
+          <Route path={APP_ROUTES.MY_ACCOUNT} element={<MyAccount />} />
+          <Route path={APP_ROUTES.LOGIN} element={<Login />} />
+          <Route path={APP_ROUTES.SEND_EMAIL} element={<SendEmail />} />
+          <Route path={APP_ROUTES.CHECKOUT} element={<Checkout />} />
+          <Route path={APP_ROUTES.ORDERS} element={<Orders />} />
+          <Route path={APP_ROUTES.NOT_FOUND} element={<NotFound />} />
         </Routes>
     </BrowserRouter>
     </AppContext.Provider>

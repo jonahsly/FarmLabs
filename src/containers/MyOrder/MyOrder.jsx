@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import OrderItem from '../../components/OrderItem/OrderItem';
 import AppContext from "../../contexts/AppContext";
+import { UI_TEXT } from '../../constants/uiText';
 import './MyOrder.css';
 import iarrow from '../../assets/icons/arrow.svg';
 
@@ -22,7 +23,7 @@ const MyOrder = () => {
 		<aside className="MyOrder">
 			<div className="title-container">
 				<img src={iarrow} alt="arrow" />
-				<p className="title">My Order</p>
+				<p className="title">{UI_TEXT.myOrder.title}</p>
 			</div>
 			<div className="my-order-content">
 				{hasItems ? (
@@ -32,16 +33,16 @@ const MyOrder = () => {
 						))}
 						<div className="order">
 							<p>
-								<span>Total</span>
+								<span>{UI_TEXT.myOrder.total}</span>
 							</p>
 							<p>${sumTotal()}</p>
 						</div>
 						<button className="primary-button">
-							Checkout
+							{UI_TEXT.myOrder.checkout}
 						</button>
 					</>
 				) : (
-					<p className="empty-state">Your cart is empty. Add products to continue.</p>
+					<p className="empty-state">{UI_TEXT.myOrder.empty}</p>
 				)}
 			</div>
 		</aside>

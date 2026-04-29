@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Menu from '../Menu/Menu';
 import MyOrder from '../../containers/MyOrder/MyOrder';
 import AppContext from '../../contexts/AppContext';
+import { APP_ROUTES } from '../../constants/routes';
+import { UI_TEXT } from '../../constants/uiText';
+import appConfig from '../../config/appConfig';
 import './Header.css';
 import ilogo from '../../assets/logos/logo_farm_labs.svg';
 import imenu from '../../assets/icons/icon_menu.svg';
@@ -22,30 +25,18 @@ const Header = () => {
             <div className="navbar-left">
                 <img src={ilogo} alt="logo" className="nav-logo"/>
                 <ul>
-                    <li>
-                        <Link to="/">Flowers</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Oils</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Concentrates</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Edibles</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Seeds</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Vapes</Link>
-                    </li>
+                    {UI_TEXT.header.categories.map((category) => (
+                        // Categories remain local links until category routing is added.
+                        <li key={category}>
+                            <Link to={APP_ROUTES.HOME}>{category}</Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
             <div className="navbar-right">
                 <ul>
                     <li className="navbar-email" onClick={handleToggle}>
-                        farmlabs@example.com
+                        {appConfig.supportEmail}
                     </li>
                     <li 
                         className="navbar-shopping-cart" 

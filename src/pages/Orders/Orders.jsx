@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import OrderItem from '../../components/OrderItem/OrderItem';
 import AppContext from '../../contexts/AppContext';
+import { UI_TEXT } from '../../constants/uiText';
 import './Orders.css';
 
 const Orders = () => {
@@ -9,7 +10,7 @@ const Orders = () => {
 	return (
 		<div className="Orders">
 			<div className="Orders-container">
-				<h1 className="title">My Orders</h1>
+				<h1 className="title">{UI_TEXT.orders.title}</h1>
 				<div className="Orders-content">
 					{state.cart.length > 0 ? (
 						state.cart.map((product, index) => (
@@ -19,7 +20,7 @@ const Orders = () => {
 							/>
 						))
 					) : (
-						<p>No orders yet.</p>
+						<p>{UI_TEXT.orders.empty}</p>
 					)}
 				</div>
 			</div>
