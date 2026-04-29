@@ -20,6 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "lint": "node scripts/codeQuality.js lint",
+    "lint:fix": "node scripts/codeQuality.js lint:fix",
+    "format": "node scripts/codeQuality.js format",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
