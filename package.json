@@ -19,6 +19,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "pre-release:check": "node scripts/preReleaseCheck.js",
     "test": "react-scripts test",
     "lint": "node scripts/codeQuality.js lint",
     "lint:fix": "node scripts/codeQuality.js lint:fix",
